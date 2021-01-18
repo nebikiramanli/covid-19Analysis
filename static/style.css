@@ -1,0 +1,10 @@
+body {
+    background-color: rgb(14, 192, 153);
+    color: rgb(12, 11, 11);
+  }
+  
+  h1,
+  td,
+  tr {
+    color: white;
+  }

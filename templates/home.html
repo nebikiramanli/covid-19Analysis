@@ -1,0 +1,36 @@
+{% extends "base.html" %} {% block content %}
+
+
+<div class="container">
+    <h1>COVID-19 Analiz Haritası</h1>
+  <div class="row">
+    
+    <div class="col-4">
+        <h5><font color="red">Bölgelere Göre Onaylı Vakalalar </font></h5>
+        <p>Kullanılan Veriler Dünya Sağlık Örgütünün 3 Ocak 2021 Verilerinden Alınmıştır</p>
+        <table class="table-responsive-sm table-dark">
+        <thead>
+            <tr>
+            <th scope="col">Bölgeler</th>
+            <th scope="col">Onaylı Vakalalar </tr>
+                </tr>
+        </thead>
+        <tbody>
+    {% for pair in pairs %}
+    <tr>
+    <td>{{ pair[0]}}</td>
+    <td>{{ pair[1]}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+    </table></div>
+    <div class="col-8">
+        <h5><font color="firebrick">Dünya Haritasında COVID-19 Vaka Sayıları </font></h5>
+        <p></p>
+        {{cmap|safe}}</div>
+        
+  </div>
+</div>
+
+
+{% endblock %}
